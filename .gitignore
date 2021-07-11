@@ -1,0 +1,22 @@
+out
+log.log
+*.pyc
+**/.vscode
+*.vsix
+**/.vscode/.ropeproject/**
+**/testFiles/**/.cache/**
+.vscode-test
+__pycache__
+**/.mypy_cache/**
+**/.vscode-test/**
+**/.vscode test/**
+**/.vscode-smoke/**
+**/.venv*/
+pythonFiles/lib/**
+.pytest_cache
+.python-version
+.vs/
+test-results*.xml
+!build/
+debug*.log
+debugpy*.log
