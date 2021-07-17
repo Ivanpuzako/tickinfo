@@ -3,7 +3,7 @@ from setuptools import setup
 setup(name='tickinfo',
       version='0.1',
       description='get ticker data and create SMA plot',
-      url='http://github.com/ivanpuzako/tickinfo',
+      url='http://github.com/ivanpuzako/tickinfo.git',
       author='Ivanpuzako',
       author_email='Ivanpuzako@gmail.com',
       license='MIT',
