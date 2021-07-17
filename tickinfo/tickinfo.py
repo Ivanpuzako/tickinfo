@@ -11,7 +11,7 @@ class Ticker:
         self._ticker_name = ticker_name
         self._ticker = yf.Ticker(ticker_name)
 
-    def ticker_info_last_hour(self, end_time: datetime.datetime) -> pd.DataFrame:
+    def info_last_hour(self, end_time: datetime.datetime) -> pd.DataFrame:
         """Reads info about ticker for some hour time with 5 min 
         interval
 
@@ -68,7 +68,7 @@ class Ticker:
             for column in ["Low_mean_sma", "High_mean_sma"]:
                 color = random.choice(colors)
                 colors.remove(color)
-                ax.plot(df['time'], df[column], color=color, 
+                ax.plot(df['time'], df[column], color=color,
                         label=label+' '+column.split('_')[0])
 
         plt.xticks(rotation=90)
@@ -77,6 +77,7 @@ class Ticker:
         ax.set_title('TS Plot')
         ax.grid(True)
         ax.legend(loc='upper left')
+        return ax
 
     def calc_sma(self, start_time: datetime.datetime,
                  end_time: datetime.datetime,
@@ -96,7 +97,7 @@ class Ticker:
         all_df = pd.DataFrame()
         while start_time < end_time:
             start_time += datetime.timedelta(hours=1)
-            hour_df = self.ticker_info_last_hour(start_time)
+            hour_df = self.info_last_hour(start_time)
             mean = self.calc_average(hour_df, [start_time])
             all_df = all_df.append(mean)
         ret = all_df.rolling(window=window_size) \

@@ -7,5 +7,14 @@ setup(name='tickinfo',
       author='Ivanpuzako',
       author_email='Ivanpuzako@gmail.com',
       license='MIT',
+      setup_requires=[
+        'pytest-runner',
+    ],
+      install_requires=[
+          'yfinance', 
+          'pandas', 
+          'matplotlib'
+      ],
+      tests_require=['pytest'],
       packages=['tickinfo'],
       zip_safe=False)

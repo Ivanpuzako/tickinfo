@@ -1,1 +1,1 @@
-from ticker_info import Ticker
+from .tickinfo import Ticker
