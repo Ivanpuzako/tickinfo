@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='tickinfo',
-      version='0.1',
+      version='0.1.1',
       description='get ticker data and create SMA plot',
       url='http://github.com/ivanpuzako/tickinfo.git',
       author='Ivanpuzako',

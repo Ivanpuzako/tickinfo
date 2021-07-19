@@ -24,7 +24,6 @@ class Ticker:
         start_time = end_time - datetime.timedelta(hours=1)
         hour_history = self._ticker.history(start=start_time,
                                             end=end_time, interval='5m')
-        hour_history.index = hour_history.index.tz_convert('Europe/Moscow')
         return hour_history
 
     def calc_average(self, ticker_info: pd.DataFrame,
